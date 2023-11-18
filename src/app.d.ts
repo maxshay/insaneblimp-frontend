@@ -1,4 +1,4 @@
-import PocketBase, { Record, Admin } from "pocketbase";
+import type PocketBase, { RecordModel, AdminModel } from "pocketbase";
 
 // https://kit.svelte.dev/docs/types#app
 declare global {
@@ -6,7 +6,7 @@ declare global {
 		// interface Error {}
 		interface Locals {
 			pb: PocketBase,
-			user: Record | Admin | null
+			user: RecordModel | AdminModel | null
 		}
 		// interface PageData {}
 		// interface Platform {}

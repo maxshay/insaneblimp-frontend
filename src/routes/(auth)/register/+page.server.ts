@@ -1,7 +1,8 @@
 import { generateUsername } from '$lib/utils.js'
 import { error, redirect } from '@sveltejs/kit'
+import type { Actions } from './$types'
 
-export const actions = {
+export const actions: Actions = {
     register: async function ({ locals, request }) {
         const body = Object.fromEntries(await request.formData())
 

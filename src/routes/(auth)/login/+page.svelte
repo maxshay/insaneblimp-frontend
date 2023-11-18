@@ -1,5 +1,8 @@
 <script lang="ts">
 	import Logo from '../../../components/ui/Logo.svelte';
+	import type {ActionData} from "./$types"
+
+	export let form: ActionData;
 </script>
 
 <svelte:head>
@@ -16,7 +19,9 @@
 		for a free trial.
 	</p>
 </div>
-<form action="?/login" class="mt-10 grid grid-cols-1 gap-y-8" method="post">
+<form method="POST" action="?/login" class="mt-10 grid grid-cols-1 gap-y-8" >
+	{#if form?.missing}<p class="error">The email field is required</p>{/if}
+	{#if form?.incorrect}<p class="error">Invalid credentials!</p>{/if}
 	<div>
 		<label for="email" class="mb-3 block text-sm font-medium text-gray-700">Email address</label
 		><input
