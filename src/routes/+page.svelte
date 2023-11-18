@@ -1,7 +1,7 @@
 <script lang="ts">
 	import './style.css';
-	import Header from './Header.svelte';
-	import Footer from './Footer.svelte';
+	import Footer from '../components/layout/Footer.svelte';
+	import Header from '../components/layout/Header.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 </script>

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Admin, Record } from 'pocketbase';
+	import type { AdminModel, RecordModel } from 'pocketbase';
 
-	export let user: Admin | Record | null;
+	export let user: AdminModel | RecordModel | null;
 	// https://www.youtube.com/watch?v=mM5sqLUS4nY&t=497s&ab_channel=Huntabyte
 </script>
 

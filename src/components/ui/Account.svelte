@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Avatar from './Avatar.svelte';
-	import { clickOutside } from './clickOutside';
+	import { clickOutside } from '../../utils/clickOutside';
 	import { fade } from 'svelte/transition';
 
 	function handleClickOutside() {
@@ -18,8 +18,7 @@
 			aria-expanded="true"
 			aria-haspopup="true"
 			on:click={() => (visible = !visible)}
-			use:clickOutside
-			on:click_outside={handleClickOutside}
+			use:clickOutside={handleClickOutside}
 		>
 			<Avatar />
 		</button>

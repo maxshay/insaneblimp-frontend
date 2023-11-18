@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Record, Admin } from 'pocketbase';
-	import Logo from './Logo.svelte';
-	import Account from './Account.svelte';
+	import type { AdminModel, RecordModel } from 'pocketbase';
+	import Logo from '../ui/Logo.svelte';
+	import Account from '../ui/Account.svelte';
 
-	export let user: Record | Admin | null;
+	export let user: RecordModel | AdminModel | null;
 </script>
 
 <header class="py-10">
